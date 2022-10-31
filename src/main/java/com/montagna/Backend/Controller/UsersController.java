@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/users")
-@CrossOrigin
+@CrossOrigin (origins = "https://portfoliomontagna-676d9.web.app")
 public class UsersController {
     @Autowired
     ImpUsersService usersService;
@@ -41,7 +41,7 @@ public class UsersController {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
-    @PostMapping("users/create/")
+    @PostMapping("/users/create/")
     public String createUser(@RequestBody Users users) {
           usersService.save(users);
         return "Usuario nuevo creado";
@@ -69,7 +69,7 @@ public class UsersController {
         return new ResponseEntity(new Message("Usuario actualizado"), HttpStatus.OK);
     }
 
-@DeleteMapping("users/detail/{id}")
+@DeleteMapping("/users/detail/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!usersService.existsById(id)) {
             return new ResponseEntity(new Message("Id inexistente"), HttpStatus.BAD_REQUEST);
@@ -79,7 +79,7 @@ public class UsersController {
         return new ResponseEntity(new Message("Usuario eliminado"), HttpStatus.OK);
     }
 
-    @GetMapping("users/detail/{id}")
+    @GetMapping("/users/detail/{id}")
     public ResponseEntity<Users> getById(@PathVariable("id") int id) {
         if (!usersService.existsById(id)) {
             return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
