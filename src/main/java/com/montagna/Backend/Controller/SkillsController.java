@@ -45,7 +45,7 @@ public class SkillsController {
             return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
         }
         skillsService.delete(id);
-        return new ResponseEntity(new Message("Skill eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Message("Skill eliminada"), HttpStatus.OK);
     }
 
     @PostMapping("/create")
