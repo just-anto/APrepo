@@ -32,6 +32,7 @@ public class Users {
     @NotNull
     private String description;
 
+    @NotNull
     private String img;
 
     public Users() {
