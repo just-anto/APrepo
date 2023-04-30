@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.montagna.Backend.BackendApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.957 s - in com.montagna.Backend.BackendApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.08 s - in com.montagna.Backend.BackendApplicationTests
