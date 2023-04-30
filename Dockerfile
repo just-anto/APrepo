@@ -1,7 +1,7 @@
-FROM amazoncorretto:8-alpine-jdk
+FROM amazoncorretto:11-alpine-jdk
 
-COPY target/Backend-0.0.1-SNAPSHOT.jar app.jar
+MAINTAINER AntoMontagna
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/Backend-0.0.1-SNAPSHOT back-app.jar
 
-EXPOSE 8080
+ENTRYPOINT ["java","-jar","/back-app.jar"]
